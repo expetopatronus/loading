@@ -1,0 +1,42 @@
+* {
+	margin: 0;
+	position: absolute;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+}
+
+#loading {
+	height: 20vmin;
+	width: 20vmin;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border: 5vmin solid;
+	border-color: #777 #555 #333 #111;
+	animation-name: load;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+/* animation */
+@keyframes load {
+	25% {
+		border-color: #111 #777 #555 #333;
+	}
+
+	50% {
+		border-color: #333 #111 #777 #555;
+	}
+
+	75% {
+		border-color: #555 #333 #111 #777;
+	}
+
+	100% {
+		border-color: #777 #555 #333 #111;
+	}
+}
